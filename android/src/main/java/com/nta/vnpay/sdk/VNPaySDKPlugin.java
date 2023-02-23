@@ -21,21 +21,23 @@ public class VNPaySDKPlugin extends Plugin {
     @PluginMethod
     public void echo(PluginCall call) {
         String value = call.getString("value");
-        openSdk();
+        openSdk(value, call);
         JSObject ret = new JSObject();
         ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+//        call.resolve(ret);
     }
-    public void openSdk() {
+    public void openSdk(String value,PluginCall call) {
+        Log.wtf("check: ", "value: " + value);
         Intent intent = new Intent(this.getContext(), VNP_AuthenticationActivity.class);
-        intent.putExtra("url", "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=10000000&vnp_Command=pay&vnp_CreateDate=20230217155719&vnp_CurrCode=VND&vnp_ExpireDate=20230217162719&vnp_IpAddr=115.79.38.101&vnp_Locale=vn&vnp_OrderInfo=Thanh+toan+don+hang%3A30308338&vnp_OrderType=250000&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8080%2Fvnpay_jsp%2Fvnpay_return.jsp&vnp_TmnCode=CATHAYAP&vnp_TxnRef=30308338&vnp_Version=2.1.0&vnp_SecureHash=49854653586054edc69ad592f3b0b4dbaa1cdd6511a75ef8d54d4fe27c8203a733f9159bcd68c8b573b3dfd00561cb272f3c4d0086c51d37156e81fce7af2370"); //bắt buộc, VNPAY cung cấp
-        intent.putExtra("tmn_code", "FAHASA03"); //bắt buộc, VNPAY cung cấp
+        intent.putExtra("url", value); //bắt buộc, VNPAY cung cấp
+        intent.putExtra("tmn_code", "CATHAYAP"); //bắt buộc, VNPAY cung cấp
         intent.putExtra("scheme", "resultactivity"); //bắt buộc, scheme để mở lại app khi có kết quả thanh toán từ mobile banking
-        intent.putExtra("is_sandbox", false); //bắt buộc, true <=> môi trường test, true <=> môi trường live
+        intent.putExtra("is_sandbox", true); //bắt buộc, true <=> môi trường test, true <=> môi trường live
         VNP_AuthenticationActivity.setSdkCompletedCallback(new VNP_SdkCompletedCallback() {
             @Override
             public void sdkAction(String action) {
                 Log.wtf("SplashActivity", "action: " + action);
+                call.resolve();
                 //action == AppBackAction
                 //Người dùng nhấn back từ sdk để quay lại
 

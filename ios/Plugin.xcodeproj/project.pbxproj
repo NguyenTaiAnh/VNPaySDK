@@ -16,8 +16,10 @@
 		50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFFA52020D75100D50D53 /* Capacitor.framework */; };
 		50ADFFA82020EE4F00D50D53 /* VNPaySDKPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFFA72020EE4F00D50D53 /* VNPaySDKPlugin.m */; };
 		50E1A94820377CB70090CE1A /* VNPaySDKPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1A94720377CB70090CE1A /* VNPaySDKPlugin.swift */; };
+		B008964B29A5FBC000BDCD7D /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B008964A29A5FBC000BDCD7D /* NewViewController.swift */; };
 		B02210DC299F8966001B248E /* CallAppSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02210DB299F8966001B248E /* CallAppSDK.framework */; };
 		B02210E0299F8986001B248E /* ObjectiveC-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = B02210DF299F8986001B248E /* ObjectiveC-Bridging-Header.h */; };
+		B04BAAEA29A35A9E000AD311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04BAAE929A35A9E000AD311 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +47,10 @@
 		5E23F77F099397094342571A /* Pods-Plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.debug.xcconfig"; sourceTree = "<group>"; };
 		91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.release.xcconfig"; sourceTree = "<group>"; };
 		96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B008964A29A5FBC000BDCD7D /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		B02210DB299F8966001B248E /* CallAppSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallAppSDK.framework; path = Pods/CallAppSDKVNPAY/CallAppSDK.framework; sourceTree = "<group>"; };
 		B02210DF299F8986001B248E /* ObjectiveC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectiveC-Bridging-Header.h"; sourceTree = "<group>"; };
+		B04BAAE929A35A9E000AD311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,12 +101,14 @@
 		50ADFF8A201F53D600D50D53 /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
+				B04BAAE929A35A9E000AD311 /* Assets.xcassets */,
 				B02210DF299F8986001B248E /* ObjectiveC-Bridging-Header.h */,
 				50E1A94720377CB70090CE1A /* VNPaySDKPlugin.swift */,
 				2F98D68124C9AAE400613A4C /* VNPaySDK.swift */,
 				50ADFF8B201F53D600D50D53 /* VNPaySDKPlugin.h */,
 				50ADFFA72020EE4F00D50D53 /* VNPaySDKPlugin.m */,
 				50ADFF8C201F53D600D50D53 /* Info.plist */,
+				B008964A29A5FBC000BDCD7D /* NewViewController.swift */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04BAAEA29A35A9E000AD311 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +324,7 @@
 				50E1A94820377CB70090CE1A /* VNPaySDKPlugin.swift in Sources */,
 				2F98D68224C9AAE500613A4C /* VNPaySDK.swift in Sources */,
 				50ADFFA82020EE4F00D50D53 /* VNPaySDKPlugin.m in Sources */,
+				B008964B29A5FBC000BDCD7D /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
